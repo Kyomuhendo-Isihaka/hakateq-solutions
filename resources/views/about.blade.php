@@ -17,35 +17,16 @@
         <section class="bg-light py-5">
             <div class="container">
                 <h2 class="text-center mb-4">Meet Our Team</h2>
-                <div class="row">
+                <div class="row w3-center">
+                    @foreach ($team as $member)
                     <div class="col-md-3 text-center">
                         <div class="team-member">
-                            <img src="{{asset('image/hakateq.png')}}" alt="Team Member" class="img-fluid rounded-circle mb-3">
-                            <h5>Isihaka Kyomuhendo</h5>
-                            <p class="text-muted">CEO & Founder</p>
+                            <img src="{{ asset('storage/' . $member->profile) }}" alt="Team Member" class="img-fluid rounded-circle mb-3">
+                            <h5>{{$member->name}}</h5>
+                            <p class="text-muted">{{$member->phone}}</p>
                         </div>
                     </div>
-                    <div class="col-md-3 text-center">
-                        <div class="team-member">
-                            <img src="{{asset('image/hakateq.png')}}" alt="Team Member" class="img-fluid rounded-circle mb-3">
-                            <h5>Edison Kusemererwa</h5>
-                            <p class="text-muted">COO & Co-Founder</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <div class="team-member">
-                            <img src="{{asset('image/hakateq.png')}}" alt="Team Member" class="img-fluid rounded-circle mb-3">
-                            <h5>Davis Mugabe</h5>
-                            <p class="text-muted">CTO</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <div class="team-member">
-                            <img src="{{asset('image/hakateq.png')}}" alt="Team Member" class="img-fluid rounded-circle mb-3">
-                            <h5>Akello</h5>
-                            <p class="text-muted">Salesperson</p>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
             </div>

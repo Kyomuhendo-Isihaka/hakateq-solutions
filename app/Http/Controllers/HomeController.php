@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+use App\Models\Service;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,16 +14,28 @@ class HomeController extends Controller
         return view('welcome');
     }
     public function services(){
-        return view('services');
+        $services = Service::paginate(10);
+        return view('services',compact('services'));
     }
     public function contact(){
         return view('contact');
     }
     public function blogs(){
-        return view('blogs');
+        $blogs = Blog::orderBy('id', 'desc')->paginate(9);
+        return view('blogs', compact('blogs'));
     }
 
+    public function showBlog($id, $title)
+{
+
+    $blog = Blog::where('id', $id)->firstOrFail();
+
+    return view('blogShow', compact('blog'));
+}
+
+
     public function about(){
-        return view('about');
+        $team = User::paginate(4);
+        return view('about', compact('team'));
     }
 }

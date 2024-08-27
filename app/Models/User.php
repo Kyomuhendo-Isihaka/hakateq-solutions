@@ -19,6 +19,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'phone',
+        'user_type',
+        'profile',
         'email',
         'password',
     ];
@@ -42,4 +45,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // public function setPasswordAttribute($password)
+    // {
+    //     $this->attributes['password'] = bcrypt($password);
+    // }
+
+    // If you want to handle email verification, include this method
+    // public function markEmailAsVerified()
+    // {
+    //     $this->email_verified_at = now();
+    //     $this->save();
+    // }
 }

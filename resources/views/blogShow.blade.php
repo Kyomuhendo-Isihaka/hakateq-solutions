@@ -7,10 +7,10 @@
     <div class="w3-card-4 w3-light-grey w3-padding-16 p-3">
         <h4 class="text-center display-4 font-weight-bold">{{$blog->title}}</h4>
         <p><small>Published on {{ \Carbon\Carbon::parse($blog->published_at)->format('F j, Y') }}</small></p>
-        <img src="{{asset('storage/'. $blog->image_path)}}" width="100%" alt="">
+        <img src="{{asset($blog->image_path)}}" width="100%" alt="">
         <p class="text-center">Author: <small>{{$blog->author}}</small></p>
         <hr>
-       
+
         <p>{{$blog->content}}</p>
     </div>
 </section>

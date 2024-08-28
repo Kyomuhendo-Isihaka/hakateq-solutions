@@ -135,7 +135,7 @@
                                 </header>
                                 <div class="w3-container w3-padding-large">
                                     <div class="w3-center">
-                                        <img src="{{ asset('storage/' . $member->profile) }}" width="250"
+                                        <img src="{{ asset($member->profile) }}" width="250"
                                             alt="">
                                         <h4>Name: <small>{{ $member->name }}</small></h4>
                                         <h4>Phone: <small>{{ $member->phone }}</small></h4>
@@ -205,7 +205,7 @@
                                             <input type="file" id="profile" name="profile"
                                                 class="w3-input w3-round w3-border">
                                             @if ($member->profile)
-                                                <p>Current Profile: <img src="{{ asset('storage/' . $member->profile) }}"
+                                                <p>Current Profile: <img src="{{ asset($member->profile) }}"
                                                         alt="Profile Image" width="50"></p>
                                             @endif
                                         </div>

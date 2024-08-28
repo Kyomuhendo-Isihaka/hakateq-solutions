@@ -15,7 +15,6 @@ class ServiceController extends Controller
         $services = Service::orderBy('id', 'desc')->paginate(10);
         return view('hakateq_admin.services', compact('services'));
     }
-
     public function addService(Request $request)
     {
         // Validate the incoming request data
@@ -35,7 +34,9 @@ class ServiceController extends Controller
         // Handle file upload
         $imagePath = null;
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('images', 'public');
+            $imageName = time() . '_' . $request->file('image')->getClientOriginalName();
+            $request->file('image')->move(public_path('images/services'), $imageName);
+            $imagePath = 'images/services/' . $imageName;
         }
 
         // Create the service record
@@ -51,9 +52,9 @@ class ServiceController extends Controller
         return redirect()->back()->with('success', 'Service created successfully!');
     }
 
-
     public function update(Request $request, Service $service)
     {
+        // Validate the request data
         $request->validate([
             'name' => 'required|string|max:255',
             'icon' => 'nullable|string|max:255',
@@ -63,16 +64,20 @@ class ServiceController extends Controller
             'description' => 'required|string',
         ]);
 
-
+        // Handle image replacement if a new image is uploaded
         $imagePath = $service->image;
         if ($request->hasFile('image')) {
-            if ($imagePath) {
-                Storage::delete('public/' . $imagePath);
+            // Delete the old image if it exists
+            if ($imagePath && file_exists(public_path($imagePath))) {
+                unlink(public_path($imagePath));
             }
 
-            $imagePath = $request->file('image')->store('images', 'public');
+            $imageName = time() . '_' . $request->file('image')->getClientOriginalName();
+            $request->file('image')->move(public_path('images/services'), $imageName);
+            $imagePath = 'images/services/' . $imageName;
         }
 
+        // Update the service record
         $service->update([
             'name' => $request->name,
             'icon' => $request->icon,
@@ -88,8 +93,15 @@ class ServiceController extends Controller
     public function destroy($id)
     {
         $service = Service::findOrFail($id);
+
+        // Delete the image if it exists
+        if ($service->image && file_exists(public_path($service->image))) {
+            unlink(public_path($service->image));
+        }
+
+        // Delete the service record
         $service->delete();
 
-        return redirect()->back()->with('success', 'Service is Deleted');
+        return redirect()->back()->with('success', 'Service deleted successfully!');
     }
 }

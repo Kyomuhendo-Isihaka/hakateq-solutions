@@ -95,7 +95,7 @@
                             <th scope="row">{{ $i++ }}</td>
                             </th>
                             <td>
-                                <img src="{{asset('storage/'. $blog->image_path)}}" width="100" alt="">
+                                <img src="{{asset($blog->image_path)}}" width="100" alt="">
                             </td>
                            <td>{{$blog->title}}</td>
                            <td>{{$blog->author}}</td>
@@ -139,7 +139,7 @@
                                         <p>Author: <small>{{$blog->author}}</small></p>
                                         <div class="w3-center">
                                             <h4>{{$blog->title}}</h4>
-                                            <img src="{{asset('storage/'. $blog->image_path)}}" alt="">
+                                            <img src="{{asset($blog->image_path)}}" alt="">
 
                                         </div>
                                         <h5>Meta Description</h5>
@@ -182,7 +182,7 @@
                                             <input type="file" name="image" class="w3-input w3-round w3-border" id="image">
 
                                             @if($blog->image_path)
-                                                <img src="{{ asset('storage/'. $blog->image_path) }}" alt="Blog Image" class="w3-image w3-margin-top" style="max-width: 200px;">
+                                                <img src="{{ asset($blog->image_path) }}" alt="Blog Image" class="w3-image w3-margin-top" style="max-width: 200px;">
                                             @endif
                                         </div>
 

@@ -127,7 +127,7 @@
                                         <h5>{{$service->name}}</h5>
                                         <p>Service Icon: <span><i class="{{$service->icon}}"></i></span></p>
                                         <p>Service Icon Color: <span>{{$service->icon_color}}</span></p>
-                                        <img src="{{asset('storage/'. $service->image)}}" width="250px" alt="">
+                                        <img src="{{asset($service->image)}}" width="250px" alt="">
                                     </div>
                                         <h5>Meta Description</h5>
                                         <p>{{$service->brief_description}}</p>
@@ -172,7 +172,7 @@
                                             <label for="image" class="w3-label">Image</label>
                                             <input type="file" class="w3-input w3-round w3-border" id="image" name="image">
                                             @if($service->image)
-                                                <img src="{{ asset('storage/' . $service->image) }}" alt="Service Image" class="w3-margin-top" style="max-width: 150px;">
+                                                <img src="{{ asset($service->image) }}" alt="Service Image" class="w3-margin-top" style="max-width: 150px;">
                                             @endif
                                         </div>
                                         <div class="w3-margin-bottom">

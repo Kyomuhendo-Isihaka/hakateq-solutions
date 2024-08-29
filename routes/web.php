@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ForgotPasswordController;
@@ -52,6 +53,9 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/update-team-member/{id}', [TeamController::class, 'update'])->name('team.update');
     Route::delete('delete-team-member/{id}', [TeamController::class, 'destroy'])->name('team.destroy');
 
+    Route::get('/profile', [TeamController::class,'profile'])->name('profile');
+    Route::put('/update-profile/{id}', [TeamController::class, 'updateProfile'])->name('profile.update');
+
     Route::get('/our-services',[ServiceController::class,'index'])->name('services.index');
     Route::post('/add-service', [ServiceController::class, 'addService'])->name('service.store');
     Route::put('/services/{service}', [ServiceController::class, 'update'])->name('service.update');
@@ -64,6 +68,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
     Route::delete('delete-message/{id}', [ContactController::class, 'destroy'])->name('contact.destroy');
+
+    Route::get('/change-password',[ChangePasswordController::class, 'index'])->name('password.change');
+    Route::post('/password/update', [ChangePasswordController::class, 'updatePassword'])->name('password.changer');
 
 
 });

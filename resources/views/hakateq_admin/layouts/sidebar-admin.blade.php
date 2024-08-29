@@ -59,8 +59,8 @@
         </a>
         <div id="dropdownContainer7" class="dropdown-container">
             <ul>
-                <a href="#" class="nav-link w3-bar-item w3-button w3-hover-text-primary">Profile Settings</a>
-                <a href="#" class="nav-link w3-bar-item w3-button w3-hover-text-primary">Change Password</a>
+                <a href="{{route('profile')}}" class="nav-link w3-bar-item w3-button w3-hover-text-primary">Profile Settings</a>
+                <a href="{{route('password.change')}}" class="nav-link w3-bar-item w3-button w3-hover-text-primary">Change Password</a>
 
             </ul>
         </div>

@@ -7,6 +7,7 @@ use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
@@ -28,7 +29,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/blogs', [HomeController::class, 'blogs'])->name('blogs');
+Route::get('/projects', [HomeController::class, 'projects'])->name('projects.index');
 Route::get('/blogs/{id}/{title}', [HomeController::class, 'showBlog'])->name('blogs.show');
+
 
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
@@ -60,6 +63,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/add-service', [ServiceController::class, 'addService'])->name('service.store');
     Route::put('/services/{service}', [ServiceController::class, 'update'])->name('service.update');
     Route::delete('delete-service/{id}', [ServiceController::class, 'destroy'])->name('service.destroy');
+
+    Route::get('/our-projects', [ProjectController::class, 'index'])->name('projects');
+    Route::post('/add-project', [ProjectController::class, 'store'])->name('project.store');
+    Route::put('/update-project/{project}', [ProjectController::class, 'update'])->name('project.update');
+    Route::delete('delete-project/{id}', [ProjectController::class, 'destroy'])->name('project.destroy');
 
     Route::get('/our-blogs', [BlogController::class, 'index'])->name('blogs.index');
     Route::post('/add-blog', [BlogController::class, 'store'])->name('blogs.store');

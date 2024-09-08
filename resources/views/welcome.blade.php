@@ -62,10 +62,10 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
-                
+
                 <a class="text-center" href="{{route('services')}}" style="text-decoration:none;">See More <i class="fa fa-arrow-right"></i></a>
             </div>
         </section>
@@ -120,37 +120,23 @@
         <!-- Portfolio Section -->
         <section id="portfolio" class="py-5 bg-white">
             <div class="container">
-                <h2 class="text-center mb-5"><span class="text-app">Our</span> Products</h2>
+                <h2 class="text-center mb-5"><span class="text-app">Our</span> Projects</h2>
                 <div class="row">
+                @foreach ($projects as $project)
                     <div class="col-md-4">
                         <div class="portfolio-item">
-                            <img src="{{ asset('image/hakafinlogo.png') }}" class="img-fluid mb-3" alt="Project 1">
+                            <img src="{{ asset($project->project_image) }}" class="img-fluid" alt="Project 1">
                             <a href="" class="nav-link">
-                                <h5 class="text-center">Hakafin</h5>
+                                <h5 class="text-center">{{ $project->title }}</h5>
                             </a>
-                            <p class="text-center">Finacial Management System</p>
+                            <p class="text-center">{{ $project->type }}</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <img src="{{ asset('image/ibeliveqlogo.png') }}" class="img-fluid mb-3" alt="Project 3">
-                            <a href="" class="nav-link">
-                                <h5 class="text-center">Ibelieve</h5>
-                            </a>
-                            <p class="text-center">Social Management system</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <img src="{{ asset('image/hakateq.png') }}" class="img-fluid mb-3" alt="Project 2">
-                            <a href="" class="nav-link">
-                                <h5 class="text-center">DMS</h5>
-                            </a>
-                            <p class="text-center">Drug Management system</p>
-                        </div>
-                    </div>
+                @endforeach
 
                 </div>
+                <a class="text-center pt-3" href="{{ route('projects.index') }}" style="text-decoration:none;">See More <i class="fa fa-arrow-right"></i></a>
+
             </div>
         </section>
 
@@ -197,6 +183,7 @@
             </div>
         </div>
     </section>
+
 
 
     </div>

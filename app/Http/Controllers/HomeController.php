@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Project;
 use App\Models\Service;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -11,7 +12,8 @@ class HomeController extends Controller
 {
     //
     public function index(){
-        return view('welcome');
+        $projects = Project::take(3)->get();
+        return view('welcome', compact('projects'));
     }
     public function services(){
         $services = Service::paginate(10);
@@ -23,6 +25,10 @@ class HomeController extends Controller
     public function blogs(){
         $blogs = Blog::orderBy('id', 'desc')->paginate(9);
         return view('blogs', compact('blogs'));
+    }
+    public function projects(){
+        $projects = Project::orderBy('id', 'desc')->paginate(9);
+        return view('projects', compact('projects'));
     }
 
     public function showBlog($id, $title)

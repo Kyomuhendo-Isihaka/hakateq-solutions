@@ -26,6 +26,7 @@
         @yield('content')
     </main>
 
+    @include('layouts.pricing')
     @include('layouts.footer')
 
     <!-- JavaScript Libraries -->

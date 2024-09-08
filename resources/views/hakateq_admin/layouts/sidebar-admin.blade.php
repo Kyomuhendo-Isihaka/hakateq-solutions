@@ -34,6 +34,13 @@
 
         </a>
 
+        <a href="{{ route('projects') }}"
+        class="w3-bar-item w3-button w3-padding-large w3-hover-text-primary">
+        <i class="fa fa-fw fa-home"></i>
+        &nbsp;<span>Projects</span>
+
+    </a>
+
         <!-- Blogs Management -->
         <a href="{{route('blogs.index')}}"
             class=" w3-bar-item w3-button w3-padding-large w3-hover-text-primary">

@@ -1,6 +1,71 @@
 @extends('hakateq_admin.layouts.app')
 
 @section('content')
+<style>
+    .dashboard-content {
+    margin-left: 250px;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #f1f1f1;
+}
+
+.stat-box {
+    width: 23%;
+    background: #001F3F!important;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box i {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.stat-box h3 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.stat-box p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.dashboard-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.recent-activities, .shortcut-links {
+    width: 48%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recent-activities h4, .shortcut-links h4 {
+    margin-top: 0;
+}
+
+.activity-item, .shortcut-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.activity-item:last-child, .shortcut-item:last-child {
+    border-bottom: none;
+}
+
+.shortcut-item i {
+    margin-right: 10px;
+}
+
+</style>
 
 <div class="dashboard-contet">
 

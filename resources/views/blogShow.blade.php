@@ -11,7 +11,7 @@
         <p class="text-center">Author: <small>{{$blog->author}}</small></p>
         <hr>
 
-        <p>{{$blog->content}}</p>
+        <p>{!! $blog->content !!}</p>
     </div>
 </section>
 @endsection

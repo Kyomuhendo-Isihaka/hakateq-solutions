@@ -40,7 +40,7 @@
                             </div>
                             <div class="w3-margin-bottom">
                                 <label for="content" class="w3-label w3-text-teal">Blog Content</label>
-                                <textarea name="content" class="w3-input w3-round w3-border" id="content" rows="10" required>{{ old('content') }}</textarea>
+                                <textarea name="content" id="editor" class="w3-input w3-round w3-border" id="content" rows="10" required>{{ old('content') }}</textarea>
                             </div>
 
 
@@ -145,7 +145,7 @@
                                         <h5>Meta Description</h5>
                                             <p>{{$blog->meta_description}}</p>
                                         <h5>Blog Content</h5>
-                                        <p>{{$blog->content}}</p>
+                                        <p>{!! $blog->content !!}</p>
                                     </div>
 
 
@@ -188,7 +188,7 @@
 
                                         <div class="w3-margin-bottom">
                                             <label for="content" class="w3-label w3-text-teal">Blog Content</label>
-                                            <textarea name="content" class="w3-input w3-round w3-border" id="content" rows="10" required>{{ old('content', $blog->content) }}</textarea>
+                                            <textarea id="editor" name="content" class="w3-input w3-round w3-border"  rows="10" required>{!! old('content', $blog->content) !!}</textarea>
                                         </div>
 
                                         <div class="w3-margin-bottom">

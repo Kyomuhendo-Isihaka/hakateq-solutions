@@ -21,7 +21,7 @@
                     @foreach ($team as $member)
                     <div class="col-md-3 text-center">
                         <div class="team-member">
-                            <img src="{{ asset($member->profile) }}" alt="Team Member" class="img-fluid rounded-circle mb-3">
+                            <img src="{{ asset($member->profile) }}" width="100%" height="250px" alt="Team Member" class="img-flui rounded-circle mb-3">
                             <h5>{{$member->name}}</h5>
                             <p class="text-muted">{{$member->phone}}</p>
                         </div>

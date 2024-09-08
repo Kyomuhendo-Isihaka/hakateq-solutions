@@ -62,7 +62,11 @@
                             </div>
                         </div>
                     </div>
+                    
+                    
                 </div>
+                
+                <a class="text-center" href="{{route('services')}}" style="text-decoration:none;">See More <i class="fa fa-arrow-right"></i></a>
             </div>
         </section>
 

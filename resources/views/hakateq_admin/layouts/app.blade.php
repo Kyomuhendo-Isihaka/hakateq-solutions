@@ -117,6 +117,17 @@
         toggleDropdown('dropdownBtn2', 'dropdownContainer2', 'arrowIcon2');
         toggleDropdown('accountBtn', 'accountContainer');
     </script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+    
+    <script src="//cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('editor');
+</script>
+
+<script>
+    tinymce.init({ selector: '#edito' });
+</script>
+
 </body>
 
 </html>

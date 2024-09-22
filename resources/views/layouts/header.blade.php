@@ -1,7 +1,7 @@
 <header class="bg-white shadow-sm fixed-top">
     <div class="container d-flex justify-content-between align-items-center py-3">
         <a href="" class="d-flex align-items-center text-decoration-none">
-            <img src="{{ asset('image/logo_red.png') }}" width="40" class="mr-2" alt="hakateq Logo">
+            <img src="{{ asset('image/hakateq.png') }}" width="40" class="mr-2" alt="hakateq Logo">
             <span class="font-weight-bold text-app">Hakateq Solutions</span>
         </a>
 

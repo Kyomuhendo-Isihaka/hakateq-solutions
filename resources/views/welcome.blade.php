@@ -4,7 +4,7 @@
     <div>
         <section class="hero-section d-flex align-items-center text-center text-white">
             <video autoplay muted loop playsinline class="video-bg">
-                <source src="{{ asset('image/intro_red.mp4') }}" type="video/mp4">
+                <source src="{{ asset('image/hakateq_video.mp4') }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="overlay"></div>

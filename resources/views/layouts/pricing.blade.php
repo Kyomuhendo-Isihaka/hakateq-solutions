@@ -33,7 +33,7 @@
               <h5 class="card-title text-center">Mobile App Development</h5>
               <hr>
               <h6 class="text-center">$3,000 - $10,000</h6>
-              <ul class="list-unstyled mt-3 mb-4">
+              <ul class="list-unstyled mt-3 mb-4 text-center">
                 <li>iOS & Android Apps</li>
                 <li>Custom Features</li>
                 <li>Cross-Platform Development</li>

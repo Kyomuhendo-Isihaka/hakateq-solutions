@@ -1,8 +1,10 @@
 .bg-app{
-    background-color: #5216ca!important;
+    /* background: #5216ca!important; */
+    background: #bf0000!important;
 }
 .text-app{
-    color: #5216ca!important;
+    /* color: #5216ca!important; */
+    color:  #bf0000!important;;
 }
 
 .truncate {
@@ -12,7 +14,8 @@
 }
 
 .custom-link:hover {
-    color: #5216ac;
+    /* color: #5216ac; */
+    color:  #bf0000!important;;
 }
 
 .hero-section {
@@ -63,7 +66,8 @@
         background-image: url('/public/image/hakateq.png');
         background-size: cover;
         background-position: center;
-        background: #5216ca;
+        /* background: #5216ca; */
+        background:  #bf0000!important;;
     }
 }
 

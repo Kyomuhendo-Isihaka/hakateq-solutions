@@ -4,7 +4,7 @@
     <div>
         <section class="hero-section d-flex align-items-center text-center text-white">
             <video autoplay muted loop playsinline class="video-bg">
-                <source src="{{ asset('image/hakateq_video.mp4') }}" type="video/mp4">
+                <source src="{{ asset('image/intro_red.mp4') }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="overlay"></div>
@@ -66,7 +66,7 @@
 
                 </div>
 
-                <a class="text-center" href="{{route('services')}}" style="text-decoration:none;">See More <i class="fa fa-arrow-right"></i></a>
+                <a class="text-center text-app" href="{{route('services')}}" style="text-decoration:none;">See More <i class="fa fa-arrow-right"></i></a>
             </div>
         </section>
 
@@ -90,7 +90,7 @@
                             software up-to-date and performing optimally</p>
                     </div>
                     <div class="col-md-5">
-                        <img src="{{ asset('image/hakateq.png') }}" width="100%" alt="">
+                        <img src="{{ asset('image/logo_red.png') }}" width="100%" alt="">
                     </div>
                 </div>
 
@@ -135,7 +135,7 @@
                 @endforeach
 
                 </div>
-                <a class="text-center pt-3" href="{{ route('projects.index') }}" style="text-decoration:none;">See More <i class="fa fa-arrow-right"></i></a>
+                <a class="text-center text-app pt-3" href="{{ route('projects.index') }}" style="text-decoration:none;">See More <i class="fa fa-arrow-right"></i></a>
 
             </div>
         </section>

@@ -13,7 +13,7 @@
               <h5 class="card-title text-center">Website Development</h5>
               <hr>
               <h6 class="text-center">$500 - $2,500</h6>
-              <ul class="list-unstyled mt-3 mb-4">
+              <ul class="list-unstyled mt-3 mb-4 text-center">
                 <li>Responsive Design</li>
                 <li>SEO Optimization</li>
                 <li>E-commerce Integration</li>
@@ -53,7 +53,7 @@
               <h5 class="card-title text-center">Custom Software</h5>
               <hr>
               <h6 class="text-center">$5,000 - $20,000</h6>
-              <ul class="list-unstyled mt-3 mb-4">
+              <ul class="list-unstyled mt-3 mb-4 text-center">
                 <li>Tailored Solutions</li>
                 <li>Cloud Integration</li>
                 <li>Maintenance & Support</li>

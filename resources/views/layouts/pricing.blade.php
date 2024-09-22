@@ -19,7 +19,7 @@
                 <li>E-commerce Integration</li>
                 <li>Custom CMS</li>
               </ul>
-              <div class="d-grid">
+              <div class="d-grid text-center">
                 <a href="{{ route('contact') }}" class="btn bg-app text-whitetext-center">Get Started</a>
               </div>
             </div>

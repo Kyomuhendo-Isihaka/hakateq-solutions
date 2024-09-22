@@ -20,7 +20,7 @@
                 <li>Custom CMS</li>
               </ul>
               <div class="d-grid text-center">
-                <a href="{{ route('contact') }}" class="btn bg-app text-whitetext-center">Get Started</a>
+                <a href="{{ route('contact') }}" class="btn bg-app text-white text-center">Get Started</a>
               </div>
             </div>
           </div>

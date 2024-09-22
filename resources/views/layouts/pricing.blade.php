@@ -20,7 +20,7 @@
                 <li>Custom CMS</li>
               </ul>
               <div class="d-grid">
-                <a href="{{ route('contact') }}" class="btn bg-app text-white">Get Started</a>
+                <a href="{{ route('contact') }}" class="btn bg-app text-whitetext-center">Get Started</a>
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@
                 <li>Cross-Platform Development</li>
                 <li>API Integration</li>
               </ul>
-              <div class="d-grid">
+              <div class="d-grid text-center">
                 <a href="{{ route('contact') }}" class="btn bg-app text-white">Get Started</a>
               </div>
             </div>
@@ -59,7 +59,7 @@
                 <li>Maintenance & Support</li>
                 <li>Scalable Architecture</li>
               </ul>
-              <div class="d-grid">
+              <div class="d-grid text-center">
                 <a href="{{ route('contact') }}" class="btn bg-app text-white">Get Started</a>
               </div>
             </div>

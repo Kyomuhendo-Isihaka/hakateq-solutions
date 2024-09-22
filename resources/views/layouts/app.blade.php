@@ -76,6 +76,41 @@
     tinymce.init({ selector: '#edito' });
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('.counter');
+
+        const observerOptions = {
+            threshold: 0.8 // Adjust this value as needed
+        };
+
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    counter.innerText = '0';
+                    const updateCounter = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+                        const increment = target / 200;
+                        if (count < target) {
+                            counter.innerText = `${Math.ceil(count + increment)}`;
+                            setTimeout(updateCounter, 1);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCounter();
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+    });
+</script>
+
 </body>
 
 </html>

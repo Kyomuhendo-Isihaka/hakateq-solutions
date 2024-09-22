@@ -1,45 +1,51 @@
-<footer class="bg-app text-white py-1">
+
+
+
+<footer class="bg-app text-white pt-5">
     <div class="container">
-        {{-- <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4">
-                <img src="{{asset('image/hakateq_-removebg-preview.png')}}" alt="" width="100%">
-            </div>
-            <!-- Contact Information -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h4 class="text-app-gy">Location</h4>
-                <p>
-                    <i class="fas fa-map-marker-alt"></i> 123 Main St, Suite 500, City, Country<br>
-                    <i class="fas fa-phone"></i> +1 (123) 456-7890<br>
-                    <i class="fas fa-envelope"></i> <a href="mailto:info@.hakateqcom" class="text-white" style="text-decoration: none">info@hakateq.com</a>
-                </p>
+        <div class="row">
+            <!-- Company Info -->
+            <div class="col-md-4 mb-4">
+                <h5>Hakateq Solutions</h5>
+                <p>Your trusted partner in custom software solutions. Innovating technology to meet your business needs and drive success.</p>
             </div>
 
             <!-- Quick Links -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h4 class="text-app-gy">Quick Links</h4>
+            <div class="col-md-2 mb-4">
+                <h5>Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#services" class="text-white nav-link">Services</a></li>
-                    <li><a href="#about" class="text-white nav-link">About</a></li>
-                    <li><a href="#resources" class="text-white nav-link">Resources</a></li>
-                    <li><a href="#events" class="text-white nav-link">Events</a></li>
+                    <li><a href="{{ route('home') }}" class="text-white">Home</a></li>
+                    <li><a href="{{ route('services') }}" class="text-white">Services</a></li>
+                    <li><a href="{{ route('about') }}" class="text-white">About Us</a></li>
+                    <li><a href="{{ route('blogs') }}" class="text-white">Blog</a></li>
+                    <li><a href="{{ route('contact') }}" class="text-white">Contact</a></li>
                 </ul>
             </div>
 
-            <!-- Social Media and Newsletter Signup -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h4 class="text-app-gy">Follow Us</h4>
-                <div>
-                    <a href="https://facebook.com" class="btn btn-primary my-1 btn-sm mr-2" title="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a><br>
-                    <a href="https://twitter.com" class="btn btn-info btn my-1-sm mr-2" title="Twitter"><i class="fab fa-twitter"></i> Twitter</a><br>
-                    <a href="https://linkedin.com" class="btn btn-primary my-1 btn-sm mr-2" title="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a><br>
-                    <a href="https://instagram.com" class="btn btn-danger my-1 btn-sm" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+            <!-- Contact Info -->
+            <div class="col-md-3 mb-4">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@hakateq.com" class="text-white">info@hakateq.com</a></li>
+                    <li><i class="fas fa-phone"></i> +256 743102612</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 236 kanyanya, Kampala, Uganda</li>
+                </ul>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="col-md-3 mb-4">
+                <h5>Follow Us</h5>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-light btn-sm mr-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn btn-outline-light btn-sm mr-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="btn btn-outline-light btn-sm mr-2"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="btn btn-outline-light btn-sm"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-        </div> --}}
-
-        <!-- Copyright -->
-        <div class="text-center mt-4">
-            <p class="mb-0">&copy; <?php echo(date('Y')) ?> Hakateq Solutions. All rights reserved.</p>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="text-center pt-4 border-top border-light">
+            <p class="mb-0">&copy; <?php echo(date('Y')) ?> Hakateq Solutions. All Rights Reserved.</p>
         </div>
     </div>
 </footer>
